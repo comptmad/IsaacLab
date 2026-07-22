@@ -128,7 +128,7 @@ class FrankaGeomagicSceneCfg(InteractiveSceneCfg):
     )
 
     robot: Articulation = FRANKA_PANDA_HIGH_PD_CFG.replace(prim_path="{ENV_REGEX_NS}/Robot")
-    robot.spawn.usd_path = str(Path(__file__).resolve().parents[2] / "assets" / "franka_test.usd")
+    robot.spawn.usd_path = str(Path(__file__).resolve().parents[4] / "assets" / "franka_test.usd")
     robot.spawn.activate_contact_sensors = True
     robot.init_state.joint_pos = {}
 

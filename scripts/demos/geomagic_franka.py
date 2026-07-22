@@ -70,7 +70,7 @@ from pathlib import Path
 
 from isaaclab_assets import FRANKA_PANDA_HIGH_PD_CFG  # isort: skip
 
-FRANKA_TEST_USD = str(Path(__file__).resolve().parents[2] / "assets" / "franka_test.usd")
+FRANKA_TEST_USD = str(Path(__file__).resolve().parents[4] / "assets" / "franka_test.usd")
 
 WORKSPACE_LIMITS = {
     "x": (-0.5, 0.5),

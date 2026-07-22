@@ -8,15 +8,11 @@
 **/*.dmp
 **/.thumbs
 
-# No USD files allowed in the repo (except project assets stored via Git LFS)
+# No USD files allowed in the repo
 **/*.usd
 **/*.usda
 **/*.usdc
 **/*.usdz
-!assets/*.usd
-!assets/*.usda
-!assets/*.usdc
-!assets/*.usdz
 
 # Python
 .DS_Store
