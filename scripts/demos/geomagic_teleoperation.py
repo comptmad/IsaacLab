@@ -66,6 +66,8 @@ from isaaclab.scene import InteractiveScene, InteractiveSceneCfg
 from isaaclab.sensors import ContactSensor, ContactSensorCfg
 from isaaclab.utils import configclass
 
+from pathlib import Path
+
 from isaaclab_assets import FRANKA_PANDA_HIGH_PD_CFG  # isort: skip
 
 WORKSPACE_LIMITS = {
@@ -126,7 +128,7 @@ class FrankaGeomagicSceneCfg(InteractiveSceneCfg):
     )
 
     robot: Articulation = FRANKA_PANDA_HIGH_PD_CFG.replace(prim_path="{ENV_REGEX_NS}/Robot")
-    robot.spawn.usd_path = "/home/comptmad/Downloads/IssacSim_envs/franka_test.usd"
+    robot.spawn.usd_path = str(Path(__file__).resolve().parents[2] / "assets" / "franka_test.usd")
     robot.spawn.activate_contact_sensors = True
     robot.init_state.joint_pos = {}
 

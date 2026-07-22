@@ -44,6 +44,7 @@ Usage
 """Launch Isaac Sim Simulator first."""
 
 import argparse
+from pathlib import Path
 
 from isaaclab.app import AppLauncher
 
@@ -117,7 +118,7 @@ class MicrosurgicalKeyboard(Se3Keyboard):
 # Constants
 # ---------------------------------------------------------------------------
 
-MICROBOT_USD_PATH  = "/home/comptmad/Downloads/IssacSim_envs/flattened_microbot.usd"
+MICROBOT_USD_PATH = str(Path(__file__).resolve().parents[2] / "assets" / "flattened_microbot.usd")
 MICROBOT_PRIM_PATH = "/World/Microrobot/body_link"
 
 ARM1_JOINT_NAMES = [
